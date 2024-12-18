@@ -1,0 +1,203 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #212529; /* Dark background */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #f8f9fa !important; /* Light text */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #adb5bd !important; /* Light gray hover */
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('https://images.paramount.tech/uri/mgid:arc:imageassetref:shared.bet.us:35b3a58a-f486-11eb-84ca-0e0dce71f2a5?quality=0.7&gen=ntrn') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    color: #f8f9fa;
+    font-weight: 700;
+}
+
+#hero p {
+    color: #ced4da;
+}
+
+.custom-hover-btn {
+    transition: all 0.3s ease;
+    border-color: #fff;
+}
+
+.custom-hover-btn:hover {
+    background-color: #fff;
+    color: #212529;
+}
+
+.custom-shape-divider-bottom-1734443523 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1734443523 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1734443523 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* About Section */
+#about {
+    background-color: #f8f9fa;
+}
+
+.about-img-hover {
+    transition: transform 0.3s ease;
+}
+
+.about-img-hover:hover {
+    transform: scale(1.05);
+}
+
+#about p {
+    color: #495057;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+.icon-hover {
+    transition: transform 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.1);
+}
+
+#skills h5 {
+    margin-top: 10px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f8f9fa;
+}
+
+.project-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #343a40;
+}
+
+#contact p {
+    color: #ced4da;
+}
+
+.social-icon {
+    color: #f8f9fa;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #adb5bd;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+footer a {
+    color: #f8f9fa;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #adb5bd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    #about .col-md-5,
+    #about .col-md-7 {
+        text-align: center;
+    }
+
+    #projects .card img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+}
